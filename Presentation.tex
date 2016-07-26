@@ -1,0 +1,247 @@
+\documentclass[handout]{beamer}
+
+\usepackage{inputenc}
+\usepackage[english]{babel}
+\usepackage{setspace}
+\usepackage{amsmath,latexsym}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{floatflt}
+\usepackage{amssymb}
+
+\usetheme{Hannover}
+\usecolortheme{seahorse}
+
+\begin{document}
+\footnotesize
+
+\setbeamercovered{dynamic}
+\title{Dynamic allocation as a stoichiometric control mechanism in bacterial cells}
+\author{Fellow: Olga A. Nev\\Supervisor: Dr. Hugo A. van den Berg}
+\institute{Warwick Centre for Analytical Science / Warwick Mathematics Institute}
+\date{March 3, 2015}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Background information}
+
+\begin{frame}
+\frametitle{Background information}
+\begin{minipage}[0.2\textheight]{\textwidth}
+\begin{columns}[T]
+\begin{column}{0.75\textwidth}
+ \begin{itemize}
+\item 2001 - 2006: Nizhniy Novgorod State University (BSc), faculty of Calculating Mathematics and Cybernetics, major in Applied Mathematics and Informatics\\
+\item 2004 - 2008: Nizhniy Novgorod State University (BSc), faculty of Management and Business, major in Enterprise Economics and Management\\
+\item 2010 - 2012: Saint-Petersburg branch of High School of Economics (MSc), faculty of Economic, major in Mathematical Methods of Economic Analysis\\
+\item 2011 - 2014: Saint-Petersburg State University (Ph.D. student in Physics and Mathematics, suspended in May, 2014), faculty of Mathematics and Mechanics, major in Statistical Simulation\\
+\item January 2015: joined the Warwick CAS-IDP program 
+\end{itemize}
+\end{column}
+\begin{column}{0.25\textwidth}
+\center{\includegraphics[width=2.8cm]{NN}}
+\center{\includegraphics[width=2.8cm]{SPB}}
+\center{\includegraphics[width=2.8cm]{W}}
+\end{column}
+\end{columns}
+\end{minipage}
+\end{frame}
+
+\section{Technical and transferable skills training}
+\begin{frame}
+\frametitle{Technical and transferable skills training}
+\begin{block}{On-going training}
+  -  Mathematical Modelling by using the software package Mathematica
+
+\end{block}
+
+\begin{block}{Future training}
+\begin{minipage}[0.2\textheight]{\textwidth}
+\begin{columns}[T]
+\begin{column}{0.75\textwidth}
+\begin{itemize}
+\item Transferable skills
+
+ -  Science Communication Course\\
+ -  Team Working in a Research Environment\\
+ -  Doctoral Skills 1
+
+\item Technical skills
+
+ -  Introduction to Chemistry and Biochemistry\\
+ -  Brownian Motion\\
+ -  Molecular Modelling\\
+ -  Stochastic Analysis\\
+ -  Variational Principles
+
+\end{itemize}
+\end{column}
+
+\begin{column}{0.25\textwidth}
+\center{\includegraphics[width=3cm]{T}}
+\end{column}
+
+\end{columns}
+\end{minipage}
+\end{block}
+\end{frame}
+
+\section{Dynamic allocation model}
+\subsection{Vision, aims and objectives}
+\begin{frame}
+\frametitle{Dynamic allocation model}
+\framesubtitle{Vision, aims and objectives}
+
+\begin{block}{Project objectives}
+\begin{enumerate}
+\item To formulate a theory\\
+\item To use the theory to define experiments
+
+\begin{minipage}[0.2\textheight]{\textwidth}
+\begin{columns}[c]
+\begin{column}{0.5\textwidth}
+ - Possible secondment in Delft Technical University or DSM-Delft
+\end{column}
+\begin{column}{0.5\textwidth}
+\center{\includegraphics[width=3cm]{DTU}}
+\end{column}
+\end{columns}
+\end{minipage}
+
+\item To manipulate bioproduction rates
+
+ - Reducing growth rate for undesirable organisms\\
+ - Maximizing growth rate to obtain as much bacterial biomass as possible
+
+\end{enumerate}
+
+\end{block}
+\end{frame}
+
+\subsection{Basic definitions}
+\begin{frame}
+\frametitle{Dynamic allocation model}
+\framesubtitle{Basic definitions}
+\begin{block}{Bacterial cell components}
+\begin{block}{Molecular machinery (n+2)}
+\begin{itemize}
+\item Machinery of type Zero -- machinery for synthesis\\
+\item Machinery of type $i$ -- machinery with C-molar amount $M_{i}$, $\quad i\in\{1,\dots,n\}$\\
+\item Machinery of type G -- machinery for growth
+\end{itemize}
+\end{block}
+
+\begin{block}{Reserve polymers}
+\begin{itemize}
+\item $n$ reserves with primary element-molar amount $X_{i}$, $\quad i\in\{1,\dots,n\}$
+\end{itemize}
+\end{block}
+
+\begin{block}{Structural component}
+\begin{itemize}
+\item Structural component with C-molar amount $W$
+\end{itemize}
+\end{block}
+
+\end{block}
+\end{frame}
+
+\subsection{Case $n=1$}
+\begin{frame}
+\frametitle{Dynamic allocation model}
+\framesubtitle{Case $n=1$}
+\begin{block}{Schematic representation}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.6\linewidth]{comp}}
+	\label{ris:comp}
+	\end{figure}
+\end{block}
+
+\begin{block}{Dynamic equations}
+\begin{align*}
+&\dot m_0 =\alpha_0 m_0-\psi_{W} m_G m_0\\
+&\dot m_1 =\alpha_1 m_0-\psi_{W} m_G m_1\\
+&\dot m_G =\alpha_G m_0-\psi_{W} {m_G}^2\\
+&\dot x_1 =\psi_{11} m_1-\psi_{W} m_G\left(1+x_1\right) -m_0\sum_{k\in\{0,1,G\}}{\sigma_{1k}\alpha_k}\
+\end{align*}
+\end{block}
+
+\end{frame}
+
+\subsection{Results for case $n=1$}
+\begin{frame}
+\frametitle{Dynamic allocation model}
+\framesubtitle{Results for case $n=1$}
+
+\begin{block}{Changing nutrient concentration (e.g. glucose)}
+\begin{figure}[h]
+	\center{\includegraphics[width=0.5\linewidth]{psi}}
+	\label{ris:psi}
+	\end{figure}
+\end{block}
+
+\begin{block}{State variables response}
+\begin{figure}
+\minipage{0.5\textwidth}
+\includegraphics[width=0.7\linewidth]{x1}
+	\label{ris:x1}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+\includegraphics[width=0.7\linewidth]{m0}
+	\label{ris:m0}
+\endminipage\hfill
+\end{figure}
+\begin{figure}
+\minipage{0.5\textwidth}
+\includegraphics[width=0.7\linewidth]{m1}
+	\label{ris:m1}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+\includegraphics[width=0.7\linewidth]{mg}
+	\label{ris:mg}
+\endminipage\hfill
+\end{figure}
+\end{block}
+\end{frame}
+	
+\section{Acknowledge- ments and career prospects}
+\begin{frame}
+\frametitle{Acknowledgements and career prospects}
+\begin{block}{Acknowledgements}
+\begin{minipage}[b]{\textwidth}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\center{\includegraphics[width=0.80\linewidth]{EU}}
+\label{ris:EU}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\center{\includegraphics[width=0.95\linewidth]{WW}}
+\label{ris:WW}
+\end{column}
+\end{columns}
+\end{minipage}
+
+\end{block}
+\begin{block}{Career prospects and development}
+\begin{itemize}
+\item To apply mathematics to relevance to industry problems\\
+\item To interact with people from industry\\
+\item To make a substantial contribution to research and development in biotechnology or pharmacology
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section{}
+\title{Thank you for your attention!}
+\author{}
+\institute{Olga A. Nev\\Dynamic allocation as a stoichiometric control mechanism in bacterial cells}
+\date{}
+\begin{frame}
+\centering
+\titlepage
+\end{frame}
+
+\end{document}
